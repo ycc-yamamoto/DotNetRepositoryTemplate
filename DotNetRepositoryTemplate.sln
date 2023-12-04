@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{08740F8A-094A-4C21-894E-A0EBCC7E9DDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRepositoryTemplate", "src\DotNetRepositoryTemplate\DotNetRepositoryTemplate.csproj", "{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRepositoryTemplate.Library", "src\DotNetRepositoryTemplate.Library\DotNetRepositoryTemplate.Library.csproj", "{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1} = {08740F8A-094A-4C21-894E-A0EBCC7E9DDF}
+		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4} = {08740F8A-094A-4C21-894E-A0EBCC7E9DDF}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
