@@ -1,8 +1,8 @@
 ﻿#if !NETSTANDARD2_0
-using System.Buffers;
-using System.Globalization;
-#endif
 using System;
+using System.Buffers;
+#endif
+using System.Globalization;
 using System.IO;
 using System.Security.Cryptography;
 #if NETSTANDARD2_0
@@ -46,7 +46,7 @@ public static class FileHash
 
         foreach (var b in hash)
         {
-            stringBuilder.Append(b.ToString("x2"));
+            stringBuilder.Append(b.ToString("x2", CultureInfo.InvariantCulture));
         }
 
         return stringBuilder.ToString();
