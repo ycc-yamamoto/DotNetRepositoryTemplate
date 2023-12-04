@@ -18,6 +18,15 @@ csharp_new_line_before_finally = true
 csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 
+# Naming rules
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_style.notunderscored.capitalization = camel_case
+dotnet_naming_style.notunderscored.required_prefix =
+dotnet_naming_rule.private_fields_notunderscored.symbols = private_fields
+dotnet_naming_rule.private_fields_notunderscored.style = notunderscored
+dotnet_naming_rule.private_fields_notunderscored.severity = error
+
 [*.{xml,config,*proj,nuspec,props,resx,targets,yml,tasks}]
 indent_size = 2
 
