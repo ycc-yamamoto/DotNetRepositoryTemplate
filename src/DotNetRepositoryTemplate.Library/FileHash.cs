@@ -1,4 +1,4 @@
-﻿#if !NETSTANDARD2_0
+#if !NETSTANDARD2_0
 using System;
 using System.Buffers;
 #endif
@@ -27,7 +27,6 @@ public static class FileHash
         using (var fileStream = File.OpenRead(filePath))
         {
             buffer = new byte[fileStream.Length];
-
             _ = await fileStream.ReadAsync(buffer, 0, buffer.Length, cancellationToken).ConfigureAwait(false);
         }
 #else
