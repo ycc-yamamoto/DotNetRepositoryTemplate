@@ -1,29 +1,29 @@
-using System;
-using System.Runtime.InteropServices;
 using System.Threading;
-using DotNetRepositoryTemplate.Library;
+using DotNetRepositoryTemplate.Services.Impl;
+using DotNetRepositoryTemplate.UI;
+using DotNetRepositoryTemplate.UI.ViewModels;
+using DotNetRepositoryTemplate.UI.Views;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
-if (args.Length != 1)
+Thread.CurrentThread.SetApartmentState(ApartmentState.Unknown);
+Thread.CurrentThread.SetApartmentState(ApartmentState.STA);
+
+var builder = Host.CreateDefaultBuilder(args);
+
+builder.ConfigureAppConfiguration((_, config) =>
 {
-    await Console.Error.WriteLineAsync("引数としてファイルパスをひとつ指定してください。").ConfigureAwait(false);
-    return 1;
-}
-
-using var cancellationTokenSource = new CancellationTokenSource();
-
-Console.CancelKeyPress += (_, _) =>
+    config.AddCommandLine(args);
+});
+builder.ConfigureServices((_, services) =>
 {
-    if (cancellationTokenSource?.IsCancellationRequested is not false)
-    {
-        return;
-    }
+    services.AddHostedService<AppHostedService<App, MainView>>();
+    services.AddTransient<App>();
+    services.AddTransient<MainView>();
+    services.AddTransient<MainViewModel>();
+});
 
-    cancellationTokenSource.Cancel();
-};
-Console.WriteLine($"Runtime: {RuntimeInformation.FrameworkDescription}");
+var host = builder.Build();
 
-var filePath = args[0];
-var hashCode = await FileHash.GetHashCode(filePath, cancellationTokenSource.Token).ConfigureAwait(false);
-
-Console.WriteLine(hashCode);
-return 0;
+await host.RunAsync().ConfigureAwait(false);

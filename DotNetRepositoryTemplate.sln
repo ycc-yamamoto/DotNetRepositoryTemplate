@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRepositoryTemplate", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRepositoryTemplate.Library", "src\DotNetRepositoryTemplate.Library\DotNetRepositoryTemplate.Library.csproj", "{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRepositoryTemplate.UI", "src\DotNetRepositoryTemplate.UI\DotNetRepositoryTemplate.UI.csproj", "{5B529C4B-D6DF-42C2-A7AD-4699B32F44EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1} = {08740F8A-094A-4C21-894E-A0EBCC7E9DDF}
 		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4} = {08740F8A-094A-4C21-894E-A0EBCC7E9DDF}
+		{5B529C4B-D6DF-42C2-A7AD-4699B32F44EC} = {08740F8A-094A-4C21-894E-A0EBCC7E9DDF}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3951368A-CA67-4328-BAAD-8FFE9ABAD3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +33,9 @@ Global
 		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5384FE96-6848-4D76-A0C1-1F1F65DA2BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B529C4B-D6DF-42C2-A7AD-4699B32F44EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B529C4B-D6DF-42C2-A7AD-4699B32F44EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B529C4B-D6DF-42C2-A7AD-4699B32F44EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B529C4B-D6DF-42C2-A7AD-4699B32F44EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
